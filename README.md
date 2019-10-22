@@ -26,3 +26,21 @@ expvars:
  - `reqs`: Number of requests
  - `failed`: Number of errors
  - `done`: Number of images downloaded
+
+### Netdata setup
+
+Enable the `python.d` plugin in `/etc/netdata/netdata.conf`
+```toml
+[plugins]
+    python.d = yes
+```
+
+Enable the `go_expvar` plugin in `/etc/netdata/python.d.conf`
+```yaml
+go_expvar: yes
+```
+
+Register the custom variables:
+`./netdata/go_expvar.conf >> /etc/netdata/python.d/go_expvar.conf`
+
+Finally, restart netdata
