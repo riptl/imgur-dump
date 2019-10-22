@@ -50,6 +50,7 @@ func init() {
 	stats.reqs = expvar.NewInt("reqs")
 	stats.failed = expvar.NewInt("failed")
 	stats.done = expvar.NewInt("done")
+	rand.Seed(time.Now().UnixNano())
 }
 
 func main() {
