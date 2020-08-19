@@ -2,4 +2,4 @@ module github.com/terorie/imgur-dump
 
 go 1.13
 
-require github.com/valyala/fasthttp v1.15.1
+require github.com/valyala/fasthttp v1.16.0
